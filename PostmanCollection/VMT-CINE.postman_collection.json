@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "817c8f21-6479-4e26-a769-f1d7dc7e7097",
+		"name": "VMT-CINE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29749826"
+	},
+	"item": [
+		{
+			"name": "Salas de cine",
+			"item": [
+				{
+					"name": "Obtener todas las salas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": "https://localhost:7008/api/CinemaRoom/getAll"
+					},
+					"response": []
+				},
+				{
+					"name": "SalaCinexID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							}
+						],
+						"url": "https://localhost:7008/api/CinemaRoom/8"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar sala de Cine",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 10,\n  \"name\": \"Sala 10\",\n  \"capacity\": 120,\n  \"isVIP\": false,\n  \"status\": \"Sala solo para Días Festivos\",\n  \"movieCount\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7008/api/CinemaRoom/10"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Sala",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							}
+						],
+						"url": "https://localhost:7008/api/CinemaRoom/1002"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Sala por Nombre",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7008/api/CinemaRoom/search/name?name=Sala%201",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7008",
+							"path": [
+								"api",
+								"CinemaRoom",
+								"search",
+								"name"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Sala%201"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Nueva Sala",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"name\": \"Sala 12\",\n  \"capacity\": 130,\n  \"isVIP\": true,\n  \"status\": \"Sala de peliculas + 18\",\n  \"movieCount\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7008/api/CinemaRoom"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Peliculas",
+			"item": [
+				{
+					"name": "Obtener todas las peliculas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							}
+						],
+						"url": "https://localhost:7008/api/Movie"
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Pelicula",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"releaseDate\": \"2025-05-15T20:53:49.126Z\",\n  \"director\": \"string\",\n  \"duration\": 0,\n  \"genre\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7008/api/Movie"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Pelicula por ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							}
+						],
+						"url": "https://localhost:7008/api/Movie/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Informacion de una Pelicula",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 11,\n  \"name\": \"Troya\",\n  \"description\": \"Pelicula Medieval\",\n  \"releaseDate\": \"2025-05-15T20:56:12.711Z\",\n  \"director\": \"Wolfgang Petersen\",\n  \"duration\": 150,\n  \"genre\": \"Acción/Bélico\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7008/api/Movie/11"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminiar pelicula por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							}
+						],
+						"url": "https://localhost:7008/api/Movie/11"
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPelicula por nombre",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7008/api/Movie/search/name?name=Troya",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7008",
+							"path": [
+								"api",
+								"Movie",
+								"search",
+								"name"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Troya"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar pelicula por fecha de creacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImEyYWQxNjUxLTcxMzAtNDk3NC1hNjU4LTU3MWI1ZDZkZWZhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ3MzQwMTczLCJpc3MiOiJ2bS5wcnVlYmEuY2luZXNhbGFzLmFwaSIsImF1ZCI6InZtLnBydWViYS5jaW5lc2FsYXMuY2xpZW50In0.x93GmNjk6TolklzRE8V9ESwQTJbbPbzE0afV0l0D8qU"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7008/api/Movie/search/releaseDate?releaseDate=2025-05-15",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7008",
+							"path": [
+								"api",
+								"Movie",
+								"search",
+								"releaseDate"
+							],
+							"query": [
+								{
+									"key": "releaseDate",
+									"value": "2025-05-15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "autorizacion",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin\"\n}"
+						},
+						"url": "https://localhost:7008/api/Auth/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
