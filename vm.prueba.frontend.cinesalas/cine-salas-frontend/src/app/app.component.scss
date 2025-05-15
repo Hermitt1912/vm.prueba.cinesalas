@@ -1,0 +1,64 @@
+// app.component.scss
+
+@use '../styles' as *; // Si configuras includePaths, puedes importar variables globales
+
+// Contenedor principal
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Header / Navegación
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  color: white;
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-right: auto;
+  }
+
+  .nav-links {
+    a {
+      color: white;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
+
+// Contenido (router-outlet)
+.content {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+// Footer
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+// Utility: centrado de carga o mensajes
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}

@@ -1,0 +1,6 @@
+<h2>Salas</h2>
+<ul>
+  <li *ngFor="let r of rooms">
+    <a [routerLink]="['/rooms', r.id]">{{ r.name }} ({{ r.movieCount }} películas)</a>
+  </li>
+</ul>
